@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.3.2/math.js"></script>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="top" id="nav-bar">
+        <div class="left-nav">
+          <a href="./index.html"
+            ><i class="fa-solid fa-calculator"></i>MyCalculator</a
+          >
+        </div>
+        <div class="right-nav">
+          <button
+            class="light-dark"
+            onclick="lightDarkToggle()"
+            title="light Mode/Dark mode"
+          >
+            <i id="light-dark" class="fa-solid fa-lightbulb"></i>
+          </button>
+        </div>
+      </div>
+      <div class="mid" id="mid-body">
+        <div class="calc-cont" id="calc-body">
+          <div class="row-upper">
+            <input
+              type="text"
+              placeholder="0"
+              class="disp-res"
+              id="disp"
+              readonly
+            />
+          </div>
+          <div class="row-lower">
+            <div class="r-1 calc-row">
+              <button
+                class="btn-AC btn-num"
+                id="all-clr"
+                title="All Clear"
+                onclick="allClear()"
+              >
+                AC
+              </button>
+              <button
+                class="btn-del btn-num"
+                title="Delete"
+                onclick="deleteChar()"
+              >
+                <i class="fa-solid fa-delete-left"></i>
+              </button>
+              <button class="btn-num" title="remainder" onclick="dispChar('%')">
+                %
+              </button>
+              <button
+                class="btn-sl btn-num"
+                title="divide"
+                onclick="dispChar('/')"
+              >
+                <i class="fa-solid fa-divide"></i>
+              </button>
+            </div>
+            <div class="r-2 calc-row">
+              <button class="btn-num" title="7" onclick="dispChar('7')">
+                7
+              </button>
+              <button class="btn-num" title="8" onclick="dispChar('8')">
+                8
+              </button>
+              <button class="btn-num" title="9" onclick="dispChar('9')">
+                9
+              </button>
+              <button class="btn-num" title="multiply" onclick="dispChar('*')">
+                x
+              </button>
+            </div>
+            <div class="r-3 calc-row">
+              <button class="btn-num" title="4" onclick="dispChar('4')">
+                4
+              </button>
+              <button class="btn-num" title="5" onclick="dispChar('5')">
+                5
+              </button>
+              <button class="btn-num" title="6" onclick="dispChar('6')">
+                6
+              </button>
+              <button
+                class="btn-num"
+                id="sub"
+                title="subtract"
+                onclick="dispChar('-')"
+              >
+                -
+              </button>
+            </div>
+            <div class="r-4 calc-row">
+              <button class="btn-num" title="1" onclick="dispChar('1')">
+                1
+              </button>
+              <button class="btn-num" title="2" onclick="dispChar('2')">
+                2
+              </button>
+              <button class="btn-num" title="3" onclick="dispChar('3')">
+                3
+              </button>
+              <button class="btn-num" title="add" onclick="dispChar('+')">
+                +
+              </button>
+            </div>
+            <div class="r-5 calc-row">
+              <button
+                class="btn-num"
+                id="btn-zero"
+                title="0"
+                onclick="dispChar('0')"
+              >
+                0
+              </button>
+              <button
+                class="btn-num"
+                id="btn-dot"
+                title="decimal"
+                onclick="dispChar('.')"
+              >
+                .
+              </button>
+              <button
+                class="btn-num"
+                id="btn-res"
+                title="result"
+                onclick="result()"
+              >
+                <i class="fa-solid fa-equals"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot"><p>Made by Samarpan Basu</p></div>
+    </div>
+    <script src="./script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2fde02e7c8.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
